@@ -1,0 +1,14 @@
+/* Mixins are based on PostCSS Extend plugin: https://github.com/travco/postcss-extend */
+
+/* Iconfont */
+@define-placeholder iconfont {
+  font-family: "iconfont" !important; /* !important to prevent issues with browser extensions that change fonts */
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

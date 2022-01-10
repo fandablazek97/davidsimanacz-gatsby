@@ -1,0 +1,19 @@
+// DEBOUNCE
+// Utilita opakovaně spouští vybraný kód za určitý časový úsek, např. každých 100ms
+// Ušetří výkon prohlížeče pro některé funkce (např. pří hlídáni, zda se při scrollu má ukázat / schovat navigace)
+
+export function debounce(func, wait, immediate) {
+  var timeout;
+  return function () {
+    var context = this,
+      args = arguments;
+    var later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}

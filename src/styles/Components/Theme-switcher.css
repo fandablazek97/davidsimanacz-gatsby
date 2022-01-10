@@ -1,0 +1,72 @@
+/* Vyžaduje naimportovaný iconfont `Libraries/Iconfont.css` */
+.c-theme-switcher {
+  --ts-icons-base-size: 1.4rem;
+  --ts-icons-color: var(--color-rich);
+  --ts-icons-opacity: 0.8;
+
+  --ts-icon-light: var(--icon-sun);
+  --ts-icon-light-scale: 1;
+  --ts-icon-dark: var(--icon-moon);
+  --ts-icon-dark-scale: 1.1;
+
+  --ts-button-radius: var(--radius);
+  --ts-button-bg: var(--ts-icons-color);
+  --ts-button-initial-opacity: 0;
+  --ts-button-hover-opacity: 0.1;
+
+  display: inline-flex;
+  width: auto;
+  height: auto;
+
+  & input[type="checkbox"] {
+    appearance: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: hsla(var(--ts-button-bg), var(--ts-button-initial-opacity));
+    border: none;
+    border-radius: var(--ts-button-radius);
+
+    width: calc(var(--ts-icons-base-size) * 2);
+    height: calc(var(--ts-icons-base-size) * 2);
+    z-index: 0;
+
+    transition: var(--transition-color), var(--transition-background),
+      var(--transition-shadow);
+
+    &:hover {
+      background: hsla(var(--ts-button-bg), var(--ts-button-hover-opacity));
+    }
+
+    &::before {
+      @extend iconfont;
+      content: var(--ts-icon-light);
+
+      font-size: var(--ts-icons-base-size);
+      color: hsla(var(--ts-icons-color), var(--ts-icons-opacity));
+      transform: scale(var(--ts-icon-light-scale));
+    }
+
+    &:checked::before {
+      content: var(--ts-icon-dark);
+      transform: scale(var(--ts-icon-dark-scale));
+    }
+
+    &:focus {
+      @apply a11y-primary;
+    }
+
+    &:checked:hover {
+      background: hsla(var(--ts-button-bg), var(--ts-button-hover-opacity));
+    }
+
+    &:checked:focus {
+      background: hsla(var(--ts-button-bg), var(--ts-button-initial-opacity));
+    }
+  }
+}

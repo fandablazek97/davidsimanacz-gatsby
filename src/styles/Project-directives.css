@@ -1,0 +1,12 @@
+/* Extrakce komponentů tailwindu
+ * Dokumentace: https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply */
+
+@layer components {
+  /* Třída pro konzistentní nastavení focus stavu u jednotlivých komponent (ne všude vypadá hlavní výchozí outline dobře `Core/A11y.css`) */
+  .a11y-primary {
+    @apply !outline-none ring-primary ring-5 ring-offset-0 ring-opacity-50;
+  }
+}
+
+@layer utilities {
+}

@@ -1,0 +1,44 @@
+/* Vyžaduje naimportovaný iconfont `Libraries/Iconfont.css` */
+.ui-list {
+  --list-ml: 0;
+  --list-item-my: 0.6em;
+  --list-icon: var(--icon-check);
+  --list-icon-color: var(--color-primary);
+  --list-icon-size: 1.1em;
+
+  line-height: var(--base-line-height);
+  list-style: none;
+
+  &:not([class*="ml"]) {
+    margin-left: var(--list-ml);
+  }
+
+  & li {
+    margin-top: var(--list-item-my);
+    margin-bottom: var(--list-item-my);
+    margin-left: 2em;
+    text-indent: -1em;
+
+    &::before {
+      @extend iconfont;
+      content: var(--list-icon);
+      font-size: var(--list-icon-size);
+      color: hsl(var(--list-icon-color));
+
+      display: inline-block;
+      width: var(--list-icon-size);
+    }
+  }
+
+  &[data-list-color="current"] li::before {
+    color: currentColor;
+  }
+
+  &[data-list-color="primary"] {
+    --list-icon-color: var(--color-primary);
+  }
+
+  &[data-list-color="secondary"] {
+    --list-icon-color: var(--color-secondary);
+  }
+}
