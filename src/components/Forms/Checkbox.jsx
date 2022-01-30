@@ -12,16 +12,16 @@ export default function Checkbox({
   ...rest
 }) {
   return (
-    <Component className={`flex w-full h-auto ${className}`}>
+    <Component className={`inline-flex h-auto ${className}`}>
       <input
         type="checkbox"
         id={id}
         name={name}
         className={`w-5 h-5 bg-body-300 rounded-default
         border-1 border-body-200
-        checked:bg-primary checked:hover:bg-primary checked:focus:bg-primary
+        checked:bg-secondary checked:hover:bg-secondary checked:focus:bg-secondary
         transition-shadow duration-default
-        focus:a11y-primary ${
+        focus:a11y-secondary ${
           isDisabled
             ? "cursor-not-allowed pointer-events-none opacity-60"
             : "cursor-pointer opacity-100"

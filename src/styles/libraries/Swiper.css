@@ -11,7 +11,7 @@
  */
 
 body {
-  --swiper-theme-color: hsl(var(--color-primary));
+  --swiper-theme-color: hsl(var(--color-secondary));
 
   --swiper-navigation-size: 36px;
   --swiper-navigation-color: var(--swiper-theme-color);

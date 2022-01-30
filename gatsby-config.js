@@ -11,18 +11,7 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         start_url: `/`,
-        icon: "src/Assets/images/favicon.png",
-      },
-    },
-
-    // Dark mode: https://github.com/wKovacs64/gatsby-plugin-use-dark-mode
-    {
-      resolve: "gatsby-plugin-use-dark-mode",
-      options: {
-        classNameLight: "light",
-        classNameDark: "dark",
-        storageKey: "darkmode-reveal",
-        minify: true,
+        icon: "src/assets/images/favicon.png",
       },
     },
 
@@ -74,5 +63,24 @@ module.exports = {
 
     // Absolute path imports: https://www.gatsbyjs.com/plugins/gatsby-plugin-root-import/
     "gatsby-plugin-root-import",
+
+    // Google Analytics
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-3B7804Y56B", // Google Analytics / GA
+        ],
+        // This object gets passed directly to the gtag config command
+        // This config will be shared across all trackingIds
+
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
+      },
+    },
   ],
 };

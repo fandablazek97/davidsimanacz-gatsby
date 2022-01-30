@@ -1,13 +1,15 @@
 import React from "react";
-import { Link } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+// import { Link } from "gatsby";
 
 // Icon
 import { IoChatbubblesSharp } from "react-icons/io5";
 
 export default function FloatingAction() {
   return (
-    <Link
-      to="/contact"
+    <AnchorLink
+      to="/#kontakt"
+      stripHash
       className="no-underline w-16 h-16 fixed z-[90] right-7 bottom-8 flex items-center justify-center rounded-full group focus-visible:a11y-primary"
       aria-label="Kontakt"
       role="button"
@@ -18,6 +20,6 @@ export default function FloatingAction() {
         className="text-white text-[1.75rem] z-1"
         aria-label="Kontakt"
       />
-    </Link>
+    </AnchorLink>
   );
 }

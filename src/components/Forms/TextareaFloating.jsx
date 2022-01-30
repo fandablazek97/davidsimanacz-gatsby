@@ -25,7 +25,7 @@ export default function TextareaFloating({
         placeholder-transparent
         bg-body-200 rounded-default border-2 border-body-200 resize-y
         transition duration-default
-        focus:bg-transparent focus:border-primary focus:!outline-none focus:ring-1 focus:ring-primary ${
+        focus:bg-body-100 focus:border-secondary focus:!outline-none focus:ring-1 focus:ring-secondary ${
           isDisabled
             ? "cursor-not-allowed pointer-events-none opacity-60"
             : "cursor-text opacity-100"

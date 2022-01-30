@@ -16,7 +16,7 @@ import PolicyCookies from "containers/Cookies/PolicyCookies";
 export default function cookiesPage() {
   return (
     <AppLayout>
-      <Seo title="Zásady používání cookies" description="" keywords="" />
+      <Seo title="Zásady používání cookies" robotsEnabled={false} />
 
       {/* Main content */}
       <Hero title="Zásady používání cookies" />

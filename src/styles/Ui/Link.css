@@ -17,7 +17,8 @@
     opacity: var(--link-hover-opacity);
   }
 
-  &[data-link="2"] {
+  &[data-link="2"],
+  &.data-link-2 {
     --link-underline-opacity: 0.5;
     --link-underline-thickness: 1px;
 
@@ -42,7 +43,8 @@
     }
   }
 
-  &[data-link="3"] {
+  &[data-link="3"],
+  &.data-link-3 {
     --link-initial-opacity: 1;
     --link-hover-opacity: 1;
     --link-underline-thickness: 1px;
@@ -68,7 +70,8 @@
     }
   }
 
-  &[data-link="4"] {
+  &[data-link="4"],
+  &.data-link-4 {
     --link-initial-opacity: 1;
     --link-hover-opacity: 1;
 
@@ -114,7 +117,8 @@
     }
   }
 
-  &[data-link="5"] {
+  &[data-link="5"],
+  &.data-link-5 {
     --link-initial-opacity: 1;
     --link-hover-opacity: 1;
 

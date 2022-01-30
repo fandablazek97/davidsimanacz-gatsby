@@ -4,7 +4,7 @@
   --list-item-my: 0.6em;
   --list-icon: var(--icon-check);
   --list-icon-color: var(--color-primary);
-  --list-icon-size: 1.1em;
+  --list-icon-size: 1em;
 
   line-height: var(--base-line-height);
   list-style: none;

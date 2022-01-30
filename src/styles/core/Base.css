@@ -51,7 +51,6 @@ body {
 /* make sure section tag is fullwidth & inner content not overflowing */
 section {
   width: 100%;
-  overflow: hidden;
 }
 
 /* Style a bit default link */

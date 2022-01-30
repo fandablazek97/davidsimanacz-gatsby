@@ -25,8 +25,8 @@ export default function Input({
         text-base text-rich font-normal placeholder:text-rich placeholder:opacity-60 
         bg-body-200 rounded-default border-2 border-body-200 
         transition duration-default 
-        focus:bg-transparent focus:border-primary focus:relative focus:z-1
-        focus:!outline-none focus:ring-1 focus:ring-primary ${
+        focus:bg-body-100 focus:border-secondary focus:relative focus:z-1
+        focus:!outline-none focus:ring-1 focus:ring-secondary ${
           isDisabled
             ? "cursor-not-allowed pointer-events-none opacity-60"
             : "cursor-text opacity-100"

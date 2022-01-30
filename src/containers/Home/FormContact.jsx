@@ -4,11 +4,11 @@ import emailjs from "@emailjs/browser";
 
 // Components
 import { InputFloating, TextareaFloating, Checkbox } from "components/Forms";
-import Button from "components/Button";
+import ButtonOutline from "components/ButtonOutline";
 
 // Modules
-import AlertEmailSent from "./AlertEmailSent";
-import AlertEmailFailed from "./AlertEmailFailed";
+import AlertEmailSent from "global/Forms/AlertEmailSent";
+import AlertEmailFailed from "global/Forms/AlertEmailFailed";
 
 export default function FormContactTest() {
   // Ref
@@ -27,17 +27,24 @@ export default function FormContactTest() {
     var honeypot = refHoneypot.current.value;
 
     if (honeypot === "" || honeypot === null) {
-      emailjs.sendForm("service_id", "template_id", e.target, "user_id").then(
-        (result) => {
-          setmailSent(true);
-          e.target.reset();
-          setIsLoading(false);
-        },
-        (error) => {
-          setFormError(true);
-          setIsLoading(false);
-        }
-      );
+      emailjs
+        .sendForm(
+          "service_e8iymks",
+          "template_w6pnfko",
+          e.target,
+          "user_2tNsUaIQSULo6wFXKZVCs"
+        )
+        .then(
+          (result) => {
+            setmailSent(true);
+            e.target.reset();
+            setIsLoading(false);
+          },
+          (error) => {
+            setFormError(true);
+            setIsLoading(false);
+          }
+        );
     } else {
       setmailSent(true);
       e.target.reset();
@@ -71,7 +78,7 @@ export default function FormContactTest() {
       </div>
       {/* ---- Honeypot - anti spam ---- */}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-6">
         <InputFloating
           type="mail"
           name="mail"
@@ -103,9 +110,15 @@ export default function FormContactTest() {
         </Link>
       </Checkbox>
 
-      <Button as="button" type="submit" isLoading={isLoading} text="Odeslat">
+      <ButtonOutline
+        as="button"
+        type="submit"
+        isLoading={isLoading}
+        text="Odeslat"
+        className="flex w-full md:w-auto"
+      >
         Odeslat
-      </Button>
+      </ButtonOutline>
 
       <div>
         {mailSent ? <AlertEmailSent /> : null}

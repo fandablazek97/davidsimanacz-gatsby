@@ -15,7 +15,7 @@ import PolicyGdpr from "containers/Gdpr/PolicyGdpr";
 export default function gdprPage() {
   return (
     <AppLayout>
-      <Seo title="Ochrana osobních údajů" description="" keywords="" />
+      <Seo title="Ochrana osobních údajů" robotsEnabled={false} />
 
       {/* Main content */}
       <Hero title="Ochrana osobních údajů" />

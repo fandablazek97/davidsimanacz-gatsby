@@ -2,6 +2,7 @@
 // zmizí křížek a navigace nejde zavřít -> v podstatě nemá vliv na reálnou funkčnost
 
 import React, { useState, useEffect } from "react";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { Link } from "gatsby";
 
 // Hooks & Utils
@@ -12,7 +13,9 @@ import { isBrowser } from "functions/isBrowser";
 import BurgerMenu from "./BurgerButton";
 import BrandLogo from "global/BrandLogo";
 import SocialMedia from "global/SocialMedia";
-import ThemeSwitcher from "global/ThemeSwitcher";
+// import ThemeSwitcher from "global/ThemeSwitcher";
+
+import ButtonLink from "components/ButtonLink";
 
 // Links from config
 import { mainLinks, callToAction } from "configs/links";
@@ -80,28 +83,28 @@ export default function Navbar() {
         <ul className="list-none mr-5 xl:mr-8 space-x-7 xl:space-x-12 hidden lg:flex">
           {mainLinks.map((item) => (
             <li key={item.label}>
-              <Link
+              <AnchorLink
                 to={item.path}
-                className="ui-link uppercase text-sm text-rich"
-                data-link="2"
+                stripHash
+                className="ui-link data-link-2 uppercase tracking-wide font-semibold text-sm text-default"
               >
                 {item.label}
-              </Link>
+              </AnchorLink>
             </li>
           ))}
         </ul>
 
         {/* Desktop & mobile - Theme toggler */}
-        <ThemeSwitcher className="mr-5 xl:mr-8" />
+        {/* <ThemeSwitcher className="mr-5 xl:mr-8" /> */}
 
         {/* Desktop - Call to action */}
-        <a
-          href={callToAction[0].link}
-          className="ui-link text-xl text-primary self-center hidden lg:inline-flex"
-          data-link="4"
+        <ButtonLink
+          to="/rezervace-schuzky"
+          size="xs"
+          className="hidden xs:flex xs:mr-4 sm:mr-8 lg:mr-0"
         >
-          {callToAction[0].label}
-        </a>
+          Rezervace schůzky
+        </ButtonLink>
 
         {/* Burger menu */}
         <BurgerMenu
@@ -136,14 +139,14 @@ export default function Navbar() {
           >
             {mainLinks.map((item) => (
               <li key={item.label}>
-                <Link
+                <AnchorLink
                   to={item.path}
-                  onClick={closeMenu}
-                  className="ui-link text-xl uppercase text-rich font-bold"
-                  data-link="2"
+                  stripHash
+                  onAnchorLinkClick={closeMenu}
+                  className="ui-link data-link-2 text-xl uppercase text-rich font-bold"
                 >
                   {item.label}
-                </Link>
+                </AnchorLink>
               </li>
             ))}
           </ul>
@@ -161,7 +164,7 @@ export default function Navbar() {
               <li key={i}>
                 <a
                   href={item.link}
-                  className="ui-link text-2xl text-primary font-semibold normal-case"
+                  className="ui-link text-2xl text-secondary font-semibold normal-case"
                   data-link="4"
                 >
                   {item.label}

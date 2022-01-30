@@ -13,12 +13,7 @@ import Button from "components/Button";
 export default function NotFoundPage() {
   return (
     <AppLayout>
-      <Seo
-        robotsEnabled={false}
-        title="404: Stránka nenalezena"
-        description=""
-        keywords=""
-      />
+      <Seo robotsEnabled={false} title="404: Stránka nenalezena" />
 
       {/* Main content */}
       <header className="w-screen h-screen relative min-h-600 bg-body-100">

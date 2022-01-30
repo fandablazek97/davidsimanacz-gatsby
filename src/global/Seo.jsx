@@ -9,12 +9,12 @@ export default function Seo({
   title = "Název stránky",
   description = siteConfig.meta.description,
   keywords = "",
-  robotsEnabled = "true",
+  robotsEnabled = true,
 }) {
   return (
     <Helmet>
       {/* main SEO */}
-      <title>{`${siteConfig.meta.siteName} | ${title}`}</title>
+      <title>{`${title} | ${siteConfig.meta.siteName}`}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
 

@@ -1,22 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Badge from "components/Badge";
-
-export default function Hero({ title, subtitle }) {
+export default function Hero({ title }) {
   return (
-    <header className="w-screen h-128" role="banner">
+    <header className="w-screen h-96" role="banner">
       <div
         className="ui-wrapper h-full flex flex-col justify-center items-center"
         data-wrapper="sm"
       >
-        <Badge colorScheme="info" className="mt-20 mb-3 text-center">
-          Verze 1.0.X
-        </Badge>
-        <h1 className="ui-heading w-full text-center text-3xl sm:text-5xl lg:text-6xl">
+        <h1 className="ui-heading w-full text-center text-3xl sm:text-5xl lg:text-6xl mb-0 mt-16">
           {title}
         </h1>
-        <p className="ui-lead self-center text-center">{subtitle}</p>
       </div>
     </header>
   );
@@ -24,5 +18,4 @@ export default function Hero({ title, subtitle }) {
 
 Hero.propTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
 };

@@ -1,7 +1,7 @@
 .ui-separator {
-  --separator-color: var(--color-primary);
-  --separator-width: 4rem;
-  --separator-height: 3px;
+  --separator-color: var(--color-secondary);
+  --separator-width: 5rem;
+  --separator-height: 4px;
   --separator-offset: 1.5rem;
 
   position: relative;

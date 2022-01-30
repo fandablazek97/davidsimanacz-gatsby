@@ -19,7 +19,7 @@ export default function Header() {
       />
 
       {/* Theme color */}
-      {/* <meta name="theme-color" content="#F8FAFC" /> */}
+      <meta name="theme-color" content="#3e2696" />
     </Helmet>
   );
 }

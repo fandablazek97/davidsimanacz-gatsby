@@ -26,12 +26,12 @@ const ButtonOutline = forwardRef(
         onClick={onClick}
         disabled={isDisabled}
         className={`px-[1.5em] py-[1.25em] inline-flex items-center justify-center
-        text-primary uppercase font-sans font-semibold leading-none tracking-widest
+        text-secondary uppercase font-sans font-semibold leading-none tracking-widest
         bg-transparent overflow-hidden
-        border-2 border-solid border-primary rounded-default
+        border-2 border-solid border-secondary rounded-default
         transition duration-400
         group relative z-0
-        focus:a11y-primary 
+        focus:a11y-secondary 
         ${size === "base" ? "text-base" : ""}
         ${size === "xs" ? "text-xs" : ""} 
         ${size === "sm" ? "text-sm" : ""}
@@ -49,7 +49,7 @@ const ButtonOutline = forwardRef(
         {...rest}
       >
         {/* Hover span */}
-        <span className="absolute z-0 inset-[-5%] w-[110%] h-[110%] bg-primary scale-x-0 opacity-0 -skew-x-12 group-hover:scale-x-110 group-hover:opacity-100 transform-gpu transition duration-400 ease-out-cubic"></span>
+        <span className="absolute z-0 inset-[-5%] w-[110%] h-[110%] bg-secondary scale-x-0 opacity-0 -skew-x-12 group-hover:scale-x-110 group-hover:opacity-100 transform-gpu transition duration-400 ease-out-cubic"></span>
 
         {/* Left icon */}
         {IconLeft != null && (

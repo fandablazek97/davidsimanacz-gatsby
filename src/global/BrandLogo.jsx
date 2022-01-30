@@ -5,12 +5,12 @@ import brand from "Assets/svg/brand.svg";
 
 export default function BrandLogo({ className = "" }) {
   return (
-    <div className={`w-24 h-10 ${className}`}>
+    <div className={`w-28 h-12 ${className}`}>
       <img
         src={brand}
         alt="Logo značky"
-        width="96"
-        height="40"
+        width="112"
+        height="48"
         className="w-full h-full dark:invert"
       />
     </div>

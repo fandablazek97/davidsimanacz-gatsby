@@ -1,21 +1,21 @@
 const siteConfig = {
   meta: {
-    url: "https://domena.cz",
-    shortUrl: "domena.cz",
+    url: "https://davidsimana.cz",
+    shortUrl: "davidsimana.cz",
     language: "cs",
     author: "reveal - https://reveal.cz",
-    siteName: "Reveal", // Slouží také jako prefix do záložek v prohlížeči
+    siteName: "David Šimana", // Slouží také jako prefix do záložek v prohlížeči
     description:
       "React starter se základním nastavením a komponenty pro rychlý start nového reveal projektu.",
   },
-  launchDate: "1. 1. 2022",
+  launchDate: "11. 1. 2022",
   client: {
-    fullName: "Jan Novák",
-    companyName: "Firma s.r.o.",
-    ico: "01234567",
-    phone: "+420 123 456 789",
-    email: "info@domena.cz",
-    adress: "Ulice 123, 000 00 Město",
+    fullName: "David Šimana",
+    companyName: "David Šimana",
+    ico: "05673887",
+    phone: "+420 722 21 41 41",
+    email: "info@davidsimana.cz",
+    adress: "Osvobozených politických vězňů 1070, 330 23 Nýřany",
   },
   darkMode: {
     defaultTheme: "light",

@@ -27,10 +27,10 @@ const Button = forwardRef(
         disabled={isDisabled}
         className={`px-[1.5em] py-[1.25em] inline-flex items-center justify-center
         text-white uppercase font-sans font-semibold leading-none tracking-widest
-        bg-primary rounded-default overflow-hidden
+        bg-secondary rounded-default overflow-hidden
         transition duration-default
         group relative z-0
-        focus:a11y-primary 
+        focus:a11y-secondary 
         ${size === "base" ? "text-base" : ""}
         ${size === "xs" ? "text-xs" : ""} 
         ${size === "sm" ? "text-sm" : ""}
@@ -48,7 +48,7 @@ const Button = forwardRef(
         {...rest}
       >
         {/* Hover span */}
-        <span className="absolute z-0 inset-[-5%] w-[110%] h-[110%] bg-body bg-opacity-40 dark:bg-opacity-40 scale-x-0 opacity-0 -skew-x-12 group-hover:scale-x-110 group-hover:opacity-100 transform-gpu transition duration-400 ease-out-cubic"></span>
+        <span className="absolute z-0 inset-[-5%] w-[110%] h-[110%] bg-gray-950 bg-opacity-25 scale-x-0 opacity-0 -skew-x-12 group-hover:scale-x-110 group-hover:opacity-100 transform-gpu transition duration-400 ease-out-cubic"></span>
 
         {/* Left icon */}
         {IconLeft != null && (

@@ -6,6 +6,9 @@
   .a11y-primary {
     @apply !outline-none ring-primary ring-5 ring-offset-0 ring-opacity-50;
   }
+  .a11y-secondary {
+    @apply !outline-none ring-secondary ring-5 ring-offset-0 ring-opacity-50;
+  }
 }
 
 @layer utilities {
