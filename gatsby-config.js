@@ -82,5 +82,12 @@ module.exports = {
         },
       },
     },
+    // Facebook pixel
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "1936819929832204",
+      },
+    },
   ],
 };
